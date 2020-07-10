@@ -1,6 +1,6 @@
 # Changelog
 
-All Notable changes to `sped-efd` will be documented in this file.
+All Notable changes to `sped-ecd` will be documented in this file.
 
 Todas as atualizações a partir de 30/05/206 devem observar os principios [Mantendo o CHANGELOG](http://keepachangelog.com/).
 
