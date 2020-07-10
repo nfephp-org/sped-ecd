@@ -1,0 +1,16 @@
+.project
+.idea
+limpaTAB.php
+manuals
+local
+build
+outros
+vendor
+nbproject
+composer.lock
+.composer
+docker-compose.yml
+Caddyfile
+.php_cs.cache
+phpcbf.phar
+phpcs.phar
