@@ -9,7 +9,7 @@ use \stdClass;
 /**
  * Elemento I250 do Bloco I OBRIGATÓRIO [1:1]
  * REGISTRO I250: ABERTURA DO ARQUIVO DIGITAL E IDENTIFICAÇÃO DO EMPRESÁRIO OU DA SOCIEDADE EMPRESÁRIA
- * 
+ *
  * Alterar campos: vl_dc / vl_dc_mf
  */
 class I250 extends Element implements ElementInterface
