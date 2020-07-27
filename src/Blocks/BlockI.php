@@ -41,14 +41,14 @@ use NFePHP\ECD\Common\BlockInterface;
  */
 final class BlockI extends Block implements BlockInterface
 {
-    const TOTAL = '0990';
-    
+    const TOTAL = 'I990';
+
     public $elements = [
         'i001' => ['class' => Elements\I001::class, 'level' => 1, 'type' => 'single'],
         'i010' => ['class' => Elements\I010::class, 'level' => 2, 'type' => 'single'],
         'i012' => ['class' => Elements\I012::class, 'level' => 3, 'type' => 'multiple'],
         'i015' => ['class' => Elements\I015::class, 'level' => 4, 'type' => 'multiple'],
-        '1020' => ['class' => Elements\I020::class, 'level' => 3, 'type' => 'multiple'],
+        'i020' => ['class' => Elements\I020::class, 'level' => 3, 'type' => 'multiple'],
         'i030' => ['class' => Elements\I030::class, 'level' => 3, 'type' => 'multiple'],
         'i050' => ['class' => Elements\I050::class, 'level' => 3, 'type' => 'multiple'],
         'i051' => ['class' => Elements\I051::class, 'level' => 4, 'type' => 'multiple'],
@@ -71,7 +71,7 @@ final class BlockI extends Block implements BlockInterface
         'i550' => ['class' => Elements\I550::class, 'level' => 3, 'type' => 'multiple'],
         'i555' => ['class' => Elements\I555::class, 'level' => 4, 'type' => 'multiple'],
     ];
-    
+
     public function __construct()
     {
         parent::__construct(self::TOTAL);

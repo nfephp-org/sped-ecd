@@ -8,17 +8,17 @@ class ECD
 {
     protected $possibles = [
         'block0' => ['class' => Blocks\Block0::class, 'order' => 1], //Abertura, Identificação e Referências
-        'blockC' => ['class' => Blocks\BlockC::class, 'order' => 2], //Informações Recuperadas da ECD Anterior
-        'blockI' => ['class' => Blocks\BlockI::class, 'order' => 3], //Lançamentos Contábeis
-        'blockJ' => ['class' => Blocks\BlockJ::class, 'order' => 4], //Demonstrações Contábeis
-        'blockK' => ['class' => Blocks\BlockK::class, 'order' => 5], //Conglomerados Econômicos
+        'blockc' => ['class' => Blocks\BlockC::class, 'order' => 2], //Informações Recuperadas da ECD Anterior
+        'blocki' => ['class' => Blocks\BlockI::class, 'order' => 3], //Lançamentos Contábeis
+        'blockj' => ['class' => Blocks\BlockJ::class, 'order' => 4], //Demonstrações Contábeis
+        'blockk' => ['class' => Blocks\BlockK::class, 'order' => 5], //Conglomerados Econômicos
     ];
 
     public function __construct()
     {
         //todo
     }
-    
+
     /**
      * Add
      * @param BlockInterface $block
@@ -33,7 +33,7 @@ class ECD
             $this->{$name} = $block->get();
         }
     }
-    
+
     /**
      * Create a EFD string
      */
@@ -49,7 +49,7 @@ class ECD
         $efd .= $this->totalize($efd);
         return $efd;
     }
-    
+
     /**
      * Totals blocks contents
      * @param string $efd
