@@ -15,7 +15,7 @@ class Z0000 extends Element implements ElementInterface
     const REG = '0000';
     const LEVEL = 0;
     const PARENT = '';
-    
+
     protected $parameters = [
         'lecd' => [
             'type'     => 'string',
@@ -182,7 +182,7 @@ class Z0000 extends Element implements ElementInterface
             'format'   => ''
         ]
     ];
-    
+
     /**
      * Constructor
      * @param \stdClass $std

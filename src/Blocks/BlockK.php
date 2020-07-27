@@ -23,10 +23,10 @@ use NFePHP\ECD\Common\BlockInterface;
  * @method Elements\K310 k310(\stdClass $std) Constructor element K310
  * @method Elements\K315 k315(\stdClass $std) Constructor element K315
  */
-final class BlockI extends Block implements BlockInterface
+final class BlockK extends Block implements BlockInterface
 {
-    const TOTAL = '0990';
-    
+    const TOTAL = 'K990';
+
     public $elements = [
         'k001' => ['class' => Elements\K001::class, 'level' => 1, 'type' => 'single'],
         'k030' => ['class' => Elements\K030::class, 'level' => 2, 'type' => 'single'],
@@ -39,7 +39,7 @@ final class BlockI extends Block implements BlockInterface
         'k310' => ['class' => Elements\K310::class, 'level' => 4, 'type' => 'multiple'],
         'k315' => ['class' => Elements\K315::class, 'level' => 5, 'type' => 'multiple'],
     ];
-    
+
     public function __construct()
     {
         parent::__construct(self::TOTAL);

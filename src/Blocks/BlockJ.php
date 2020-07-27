@@ -27,7 +27,7 @@ use NFePHP\ECD\Common\BlockInterface;
  */
 final class BlockJ extends Block implements BlockInterface
 {
-    const TOTAL = '0990';
+    const TOTAL = 'J990';
     
     public $elements = [
         'j001' => ['class' => Elements\J001::class, 'level' => 1, 'type' => 'single'],
