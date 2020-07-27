@@ -9,7 +9,7 @@ use \stdClass;
 /**
  * Elemento I310 do Bloco I OBRIGATÓRIO [1:1]
  * REGISTRO I310: ABERTURA DO ARQUIVO DIGITAL E IDENTIFICAÇÃO DO EMPRESÁRIO OU DA SOCIEDADE EMPRESÁRIA
- * 
+ *
  * Alterar campos: val_debd / val_credd / val_deb_mf / val_cred_mf
  */
 class I310 extends Element implements ElementInterface

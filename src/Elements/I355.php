@@ -9,7 +9,7 @@ use \stdClass;
 /**
  * Elemento I355 do Bloco I OBRIGATÓRIO [1:1]
  * REGISTRO I355: ABERTURA DO ARQUIVO DIGITAL E IDENTIFICAÇÃO DO EMPRESÁRIO OU DA SOCIEDADE EMPRESÁRIA
- * 
+ *
  * Alterar campos: vl_cta e vl_cta_mf
  */
 class I355 extends Element implements ElementInterface
@@ -51,7 +51,8 @@ class I355 extends Element implements ElementInterface
             'type'     => 'string',
             'regex'    => '^[0-9]{19}$',
             'required' => false,
-            'info'     => 'Valor do saldo final antes do lançamento de encerramento em moeda funcional, convertido para reais.',
+            'info'     => 'Valor do saldo final antes do lançamento de encerramento'
+                . ' em moeda funcional, convertido para reais.',
             'format'   => ''
         ],
         'ind_dc_mf' => [
