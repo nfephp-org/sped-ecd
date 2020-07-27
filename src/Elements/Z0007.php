@@ -7,14 +7,14 @@ use NFePHP\ECD\Common\ElementInterface;
 use \stdClass;
 
 /**
- * Elemento 0000 do Bloco 0 OBRIGATÓRIO [1:1]
- * REGISTRO 0000: ABERTURA DO ARQUIVO DIGITAL E IDENTIFICAÇÃO DO EMPRESÁRIO OU DA SOCIEDADE EMPRESÁRIA
+ * Elemento 0007 do Bloco 0 OPCIONAL [0:N]
+ * REGISTRO 0007: OUTRAS INSCRIÇÕES CADASTRAIS DA PESSOA JURÍDICA
  */
 class Z0007 extends Element implements ElementInterface
 {
     const REG = '0007';
-    const LEVEL = 1;
-    const PARENT = '0000';
+    const LEVEL = 2;
+    const PARENT = '0001';
 
     protected $parameters = [
         'cod_ent_ref'  => [
@@ -26,7 +26,7 @@ class Z0007 extends Element implements ElementInterface
         ],
         'cod_inscr'  => [
             'type'     => 'string',
-            'regex'    => '^[A-Za-z0-9]$',
+            'regex'    => '^.{1,25}$',
             'required' => false,
             'info'     => 'Código cadastral da pessoa jurídica na instituição identificada no campo COD_ENT_REF.',
             'format'   => ''
