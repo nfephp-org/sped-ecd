@@ -21,21 +21,21 @@ class J930 extends Element implements ElementInterface
     protected $parameters = [
         'ident_nom' => [
             'type'     => 'string',
-            'regex'    => '^[A-Za-z]$',
+            'regex'    => '^.{2,100}$',
             'required' => true,
             'info'     => 'Nome do signatário.',
             'format'   => ''
         ],
         'ident_cpf_cnpj' => [
             'type'     => 'numeric',
-            'regex'    => '^[0-9]$',
+            'regex'    => '^[0-9]{11,14}$',
             'required' => true,
             'info'     => 'CPF ou CNPJ',
             'format'   => ''
         ],
         'ident_qualif' => [
             'type'     => 'string',
-            'regex'    => '^[A-Za-z0-9]$',
+            'regex'    => '^[0-9]{3}$',
             'required' => true,
             'info'     => 'Qualificação do assinante, conforme tabela.',
             'format'   => ''
@@ -56,7 +56,7 @@ class J930 extends Element implements ElementInterface
         ],
         'email' => [
             'type'     => 'string',
-            'regex'    => '^[A-Za-z0-9]{60}$',
+            'regex'    => '^.{2,250}$',
             'required' => false,
             'info'     => 'Email do signatário.',
             'format'   => ''

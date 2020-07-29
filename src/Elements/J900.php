@@ -33,14 +33,14 @@ class J900 extends Element implements ElementInterface
         ],
         'nat_livro' => [
             'type'     => 'string',
-            'regex'    => '^[A-Za-z0-9]{80}$',
+            'regex'    => '^.{2,80}$',
             'required' => true,
             'info'     => 'Natureza do livro; finalidade a que se destinou o instrumento.',
             'format'   => ''
         ],
         'nome' => [
             'type'     => 'string',
-            'regex'    => '^[A-Za-z0-9]$',
+            'regex'    => '^.{2,100}$',
             'required' => true,
             'info'     => 'Nome empresarial.',
             'format'   => ''

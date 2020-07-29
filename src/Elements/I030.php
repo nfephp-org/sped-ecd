@@ -31,9 +31,9 @@ class I030 extends Element implements ElementInterface
             'info'     => 'Número de ordem do instrumento associado.',
             'format'   => ''
         ],
-        'nat_liv' => [
+        'nat_livr' => [
             'type'     => 'string',
-            'regex'    => '^[A-Za-z0-9]{80}$',
+            'regex'    => '^.{2,80}$',
             'required' => true,
             'info'     => 'Natureza do livro associado; finalidade a que se destina o instrumento.',
             'format'   => ''

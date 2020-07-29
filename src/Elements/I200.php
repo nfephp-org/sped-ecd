@@ -54,15 +54,17 @@ class I200 extends Element implements ElementInterface
             'required' => false,
             'info'     => 'Data de ocorrência dos fatos objeto do lançamento extemporâneo.',
             'format'   => ''
-        ],
-        'vl_lcto_mf'     => [
-            'type'     => 'string',
-            'regex'    => '^[0-9]{19}$',
-            'required' => false,
-            'info'     => 'Valor do lançamento em moeda funcional, convertido para reais.',
-            'format'   => ''
         ]
     ];
+
+    // ,
+    //     'vl_lcto_mf'     => [
+    //         'type'     => 'string',
+    //         'regex'    => '^[0-9]{19}$',
+    //         'required' => false,
+    //         'info'     => 'Valor do lançamento em moeda funcional, convertido para reais.',
+    //         'format'   => ''
+    //     ]
 
     /**
      * Constructor

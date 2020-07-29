@@ -74,22 +74,24 @@ class I250 extends Element implements ElementInterface
             'required' => false,
             'info'     => 'Código do histórico padronizado, conforme tabela I075.',
             'format'   => ''
-        ],
-        'vl_dc_mf'     => [
-            'type'     => 'string',
-            'regex'    => '^[0-9]{19}$',
-            'required' => false,
-            'info'     => 'Valor da partida em moeda funcional, convertido para reais.',
-            'format'   => ''
-        ],
-        'ind_dc_mf' => [
-            'type'     => 'string',
-            'regex'    => '^(D|C)$',
-            'required' => false,
-            'info'     => 'Indicador da natureza da partida em moeda funcional: D - Devedor; C - Credor.',
-            'format'   => ''
         ]
     ];
+
+    // ,
+    // 'vl_dc_mf'     => [
+    //     'type'     => 'string',
+    //     'regex'    => '^[0-9]{19}$',
+    //     'required' => false,
+    //     'info'     => 'Valor da partida em moeda funcional, convertido para reais.',
+    //     'format'   => ''
+    // ],
+    // 'ind_dc_mf' => [
+    //     'type'     => 'string',
+    //     'regex'    => '^(D|C)$',
+    //     'required' => false,
+    //     'info'     => 'Indicador da natureza da partida em moeda funcional: D - Devedor; C - Credor.',
+    //     'format'   => ''
+    // ]
 
     /**
      * Constructor
