@@ -19,7 +19,7 @@ class I030 extends Element implements ElementInterface
     protected $parameters = [
         'dnrc_abert' => [
             'type'     => 'string',
-            'regex'    => '^(TERMO DE ABERTURA){17}$',
+            'regex'    => '^(TERMO DE ABERTURA)$',
             'required' => true,
             'info'     => 'Termo de Abertura.',
             'format'   => ''
@@ -45,11 +45,11 @@ class I030 extends Element implements ElementInterface
             'info'     => '0 - Bloco com dados informados;1- Bloco sem dados informados.',
             'format'   => ''
         ],
-        'nome' => [
+        'nome'      => [
             'type'     => 'string',
-            'regex'    => '^[A-Za-z0-9]$',
+            'regex'    => '^.{2,100}$',
             'required' => true,
-            'info'     => 'Nome Empresarial.',
+            'info'     => 'Nome empresarial.',
             'format'   => ''
         ],
         'nire' => [

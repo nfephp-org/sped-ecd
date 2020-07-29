@@ -7,28 +7,28 @@ use NFePHP\ECD\Common\ElementInterface;
 use \stdClass;
 
 /**
- * Elemento I075 do Bloco I OBRIGATÓRIO [0:N]
- * REGISTRO I075: TABELA DE HISTÓRICO PADRONIZADO
+ * Elemento K030 do Bloco K OBRIGATÓRIO [1:1]
+ * REGISTRO K030: ABERTURA DO ARQUIVO DIGITAL E IDENTIFICAÇÃO DO EMPRESÁRIO OU DA SOCIEDADE EMPRESÁRIA
  */
-class I075 extends Element implements ElementInterface
+class K030 extends Element implements ElementInterface
 {
-    const REG = 'I075';
-    const LEVEL = 3;
+    const REG = 'K030';
+    const LEVEL = 2;
     const PARENT = '';
 
     protected $parameters = [
-        'cod_hist'     => [
+        'dt_ini'     => [
             'type'     => 'string',
-            'regex'    => '^([0-9])*$',
+            'regex'    => '^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\d{3})$',
             'required' => true,
-            'info'     => 'Codigo do historico padronizado.',
+            'info'     => 'Data inicial do período consolidado.',
             'format'   => ''
         ],
-        'descr_hist'  => [
+        'dt_fin'     => [
             'type'     => 'string',
-            'regex'    => '^.*$',
+            'regex'    => '^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\d{3})$',
             'required' => true,
-            'info'     => 'Descricao do historico padronizado',
+            'info'     => 'Data final do período consolidado.',
             'format'   => ''
         ]
     ];

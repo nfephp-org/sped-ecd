@@ -19,11 +19,11 @@ class I250 extends Element implements ElementInterface
     const PARENT = '';
 
     protected $parameters = [
-        'cod_cta' => [
+        'cod_cta'  => [
             'type'     => 'string',
-            'regex'    => '^[A-Za-z0-9]$',
+            'regex'    => '^.*$',
             'required' => true,
-            'info'     => 'Código da conta analítica debitada/creditada.',
+            'info'     => 'Código da conta analitica',
             'format'   => ''
         ],
         'cod_ccus' => [
@@ -34,11 +34,11 @@ class I250 extends Element implements ElementInterface
             'format'   => ''
         ],
         'vl_dc'     => [
-            'type'     => 'string',
-            'regex'    => '^[0-9]{19}$',
+            'type'     => 'numeric',
+            'regex'    => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
             'info'     => 'Valor da partida.',
-            'format'   => ''
+            'format'   => '19v2'
         ],
         'ind_dc' => [
             'type'     => 'string',
@@ -56,7 +56,7 @@ class I250 extends Element implements ElementInterface
         ],
         'cod_hist_pad' => [
             'type'     => 'string',
-            'regex'    => '^[A-Za-z0-9]$',
+            'regex'    => '^([0-9])*$',
             'required' => false,
             'info'     => 'Código do histórico padronizado, conforme tabela I075.',
             'format'   => ''

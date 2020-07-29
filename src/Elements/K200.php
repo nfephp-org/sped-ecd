@@ -7,63 +7,58 @@ use NFePHP\ECD\Common\ElementInterface;
 use \stdClass;
 
 /**
- * Elemento I050 do Bloco I OBRIGATÓRIO [1:N]
- * EGISTRO I050: PLANO DE CONTAS
+ * Elemento K200 do Bloco K OBRIGATÓRIO [1:1]
+ * REGISTRO K200: ABERTURA DO ARQUIVO DIGITAL E IDENTIFICAÇÃO DO EMPRESÁRIO OU DA SOCIEDADE EMPRESÁRIA
  */
-class I050 extends Element implements ElementInterface
+class K200 extends Element implements ElementInterface
 {
-    const REG = 'I050';
+    const REG = 'K200';
     const LEVEL = 3;
     const PARENT = '';
 
     protected $parameters = [
-        'dt_alt'       => [
+        'cod_nat'      => [
             'type'     => 'string',
-            'regex'    => '^(0[1-9]|[1-2][0-9]|31(?!(?:0[2469]|11))|30(?!02))(0[1-9]|1[0-2])([12]\d{3})$',
-            'required' => true,
-            'info'     => 'Data de inclusao/alteracao.',
-            'format'   => ''
-        ],
-        'cod_nat'    => [
-            'type'     => 'string',
-            'regex'    => '^(01|02|03|04|05|09)$',
+            'regex'    => '^[A-Za-z0-9]{2}$',
             'required' => true,
             'info'     => 'Código da natureza da conta/grupo de contas, conforme tabela publicada pelo Sped.',
             'format'   => ''
         ],
-        'ind_cta'        => [
+        'ind_cta' => [
             'type'     => 'string',
             'regex'    => '^(S|A)$',
             'required' => true,
-            'info'     => 'Indicador do tipo de Conta: S-Sintetico, A-Analitico.',
+            'info'     => 'Indicador do tipo de conta:'
+                . ' S - Sintética (grupo de contas);'
+                . ' A - Analítica (conta).',
             'format'   => ''
         ],
-        'nivel'    => [
+        'nivel'        => [
             'type'     => 'numeric',
-            'regex'    => '^([0-9]*)$',
+            'regex'    => '^[0-9]$',
             'required' => true,
-            'info'     => 'Nivel da conta analitica/grupo de contas.',
+            'info'     => 'Nível da conta.',
             'format'   => ''
         ],
-        'cod_cta'      => [
+        'cod_cta'        => [
             'type'     => 'string',
-            'regex'    => '^.*$',
+            'regex'    => '^[A-Za-z0-9]$',
             'required' => true,
-            'info'     => 'Codigo da conta analitica/grupo de contas.',
+            'info'     => 'Código da conta.',
             'format'   => ''
         ],
-        'cod_cta_sup'  => [
+        'cod_cta_sup'        => [
             'type'     => 'string',
-            'regex'    => '^.*$',
+            'regex'    => '^[A-Za-z0-9]$',
             'required' => false,
-            'info'     => 'Codigo da conta sintetica/grupo de contas de nivel imediatamente superior.',
+            'info'     => 'Código da conta superior',
             'format'   => ''
         ],
-        'cta'  => [
+        'cta'        => [
             'type'     => 'string',
-            'regex'    => '^.*$',
+            'regex'    => '^[A-Za-z0-9]$',
             'required' => true,
-            'info'     => 'Nome da conta analitica/grupo de contas.',
+            'info'     => 'Nome da conta.',
             'format'   => ''
         ]
     ];

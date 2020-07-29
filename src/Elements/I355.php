@@ -51,8 +51,8 @@ class I355 extends Element implements ElementInterface
             'type'     => 'string',
             'regex'    => '^[0-9]{19}$',
             'required' => false,
-            'info'     => 'Valor do saldo final antes do lançamento de encerramento'
-                . ' em moeda funcional, convertido para reais.',
+            'info'     => 'Valor do saldo final antes do lançamento de encerramento em moeda funcional,'
+                . ' convertido para reais.',
             'format'   => ''
         ],
         'ind_dc_mf' => [

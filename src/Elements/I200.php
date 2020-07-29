@@ -7,19 +7,19 @@ use NFePHP\ECD\Common\ElementInterface;
 use \stdClass;
 
 /**
- * Elemento I200 do Bloco I OBRIGATÓRIO [1:1]
- * REGISTRO I200: ABERTURA DO ARQUIVO DIGITAL E IDENTIFICAÇÃO DO EMPRESÁRIO OU DA SOCIEDADE EMPRESÁRIA
+ * Elemento I200 do Bloco I OBRIGATÓRIO [0:N]
+ * REGISTRO I200: LANÇAMENTO CONTÁBIL
  */
 class I200 extends Element implements ElementInterface
 {
     const REG = 'I200';
     const LEVEL = 3;
-    const PARENT = '';
+    const PARENT = 'I010';
 
     protected $parameters = [
         'num_lcto'      => [
             'type'     => 'string',
-            'regex'    => '^[0-9]$',
+            'regex'    => '^[0-9]*$',
             'required' => true,
             'info'     => 'Número ou Código de identificação único do lançamento contábil.',
             'format'   => ''
@@ -32,20 +32,20 @@ class I200 extends Element implements ElementInterface
             'format'   => ''
         ],
         'vl_lcto'     => [
-            'type'     => 'string',
-            'regex'    => '^[0-9]{19}$',
+            'type'     => 'numeric',
+            'regex'    => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info'     => 'Data final das informações contidas no arquivo.',
-            'format'   => ''
+            'info'     => 'Valor do lancamento.',
+            'format'   => '19v2'
         ],
         'ind_lcto' => [
             'type'     => 'string',
             'regex'    => '^(N|E)$',
             'required' => true,
-            'info'     => 'Indicador do tipo de lançamento:
-            N - Lançamento normal (todos os lançamentos, exceto os de encerramento das contas de resultado);
-            E - Lançamento de encerramento de contas de resultado.
-            X – Lançamento extemporâneo.',
+            'info'     => 'Indicador do tipo de lançamento: '
+                . 'N - Lançamento normal (todos os lançamentos, exceto os de encerramento das contas de resultado); '
+                . 'E - Lançamento de encerramento de contas de resultado. '
+                . 'X – Lançamento extemporâneo.',
             'format'   => ''
         ],
         'dt_lcto_ext'     => [

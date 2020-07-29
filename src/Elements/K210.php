@@ -7,28 +7,28 @@ use NFePHP\ECD\Common\ElementInterface;
 use \stdClass;
 
 /**
- * Elemento I075 do Bloco I OBRIGATÓRIO [0:N]
- * REGISTRO I075: TABELA DE HISTÓRICO PADRONIZADO
+ * Elemento K210 do Bloco K OBRIGATÓRIO [1:1]
+ * REGISTRO K210: ABERTURA DO ARQUIVO DIGITAL E IDENTIFICAÇÃO DO EMPRESÁRIO OU DA SOCIEDADE EMPRESÁRIA
  */
-class I075 extends Element implements ElementInterface
+class K210 extends Element implements ElementInterface
 {
-    const REG = 'I075';
-    const LEVEL = 3;
+    const REG = 'K210';
+    const LEVEL = 4;
     const PARENT = '';
 
     protected $parameters = [
-        'cod_hist'     => [
-            'type'     => 'string',
-            'regex'    => '^([0-9])*$',
+        'cod_emp'      => [
+            'type'     => 'numeric',
+            'regex'    => '^[0-9]{4}$',
             'required' => true,
-            'info'     => 'Codigo do historico padronizado.',
+            'info'     => 'Código de identificação da empresa participante',
             'format'   => ''
         ],
-        'descr_hist'  => [
+        'cod_cta_emp'      => [
             'type'     => 'string',
-            'regex'    => '^.*$',
+            'regex'    => '^[A-Za-z0-9]$',
             'required' => true,
-            'info'     => 'Descricao do historico padronizado',
+            'info'     => 'Código da conta da empresa participante',
             'format'   => ''
         ]
     ];

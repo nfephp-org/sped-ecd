@@ -19,7 +19,7 @@ class I155 extends Element implements ElementInterface
     protected $parameters = [
         'cod_cta'  => [
             'type'     => 'string',
-            'regex'    => '^[A-Za-z0-9]$',
+            'regex'    => '^.*$',
             'required' => true,
             'info'     => 'Código da conta analitica',
             'format'   => ''
@@ -33,15 +33,14 @@ class I155 extends Element implements ElementInterface
         ],
         'vl_sld_ini'    => [
             'type'     => 'numeric',
-            'regex'    => '^[0-9]{19}$',
+            'regex'    => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
-            'info'     => 'Código  do  município  do  domicílio  fiscal  da  '
-            . 'entidade, conforme a tabela IBGE',
-            'format'   => ''
+            'info'     => 'Valor do saldo inicial do período.',
+            'format'   => '19v2'
         ],
         'ind_dc_ini' => [
             'type'     => 'string',
-            'regex'    => '^[D-C]{1}$',
+            'regex'    => '^(D|C)$',
             'required' => false,
             'info'     => 'Indicador da situacao do saldo inicial: D-Devedor; C-Credor',
             'format'   => ''
@@ -55,21 +54,21 @@ class I155 extends Element implements ElementInterface
         ],
         'vl_cred'    => [
             'type'     => 'numeric',
-            'regex'    => '^[0-9]{19}$',
+            'regex'    => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
             'info'     => 'Valor total dos creditos no periodo',
-            'format'   => ''
+            'format'   => '19v2'
         ],
         'vl_sld_fin'    => [
             'type'     => 'numeric',
-            'regex'    => '^[0-9]{19}$',
+            'regex'    => '^\d+(\.\d*)?|\.\d+$',
             'required' => true,
             'info'     => 'Valor total dos creditos no periodo',
-            'format'   => ''
+            'format'   => '19v2'
         ],
         'ind_dc_fin' => [
             'type'     => 'string',
-            'regex'    => '^[D-C]{1}$',
+            'regex'    => '^(D|C)$',
             'required' => false,
             'info'     => 'Indicador da situacao do saldo final: D-Devedor; C-Credor',
             'format'   => ''
