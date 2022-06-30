@@ -49,7 +49,7 @@ class J930 extends Element implements ElementInterface
         ],
         'ind_crc' => [
             'type'     => 'string',
-            'regex'    => '^[A-Za-z0-9]$',
+            'regex'    => '^[A-Za-z0-9]{1,10}$',
             'required' => false,
             'info'     => 'Número de inscrição do contabilista no Conselho Regional de Contabilidade.',
             'format'   => ''
