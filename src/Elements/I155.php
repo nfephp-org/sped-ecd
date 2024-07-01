@@ -26,7 +26,7 @@ class I155 extends Element implements ElementInterface
         ],
         'cod_ccus'  => [
             'type'     => 'string',
-            'regex'    => '^[A-Za-z0-9]$',
+            'regex'    => '^.*$',
             'required' => false,
             'info'     => 'Código do Centro de Custos',
             'format'   => ''
